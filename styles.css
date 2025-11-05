@@ -1,34 +1,32 @@
-/* Connection test */
-body { background: #ffe9f0; }
-
 /* Normalize spacing */
-* {
-  box-sizing: border-box;
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+/* Full-bleed background on the viewport */
+html {
+  min-height: 100%;
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('background.jpg') center / cover no-repeat fixed;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-/* Typography and layout */
+/* Typography and base */
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   color: #fff; /* light text for contrast */
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('background.jpg') center/cover no-repeat fixed;
+}
+
+/* Constrain content instead of body */
+.container {
   max-width: 72ch;
   margin: 0 auto;
   padding: 1rem;
 }
 
-/* Responsive design */
+/* Responsive */
 @media (min-width: 700px) {
-  body {
-    padding: 2rem;
-  }
-  form {
-    max-width: 600px;
-  }
+  .container { padding: 2rem; }
+  form { max-width: 600px; }
 }
+
