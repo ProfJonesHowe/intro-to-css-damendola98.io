@@ -5,6 +5,7 @@ body { background: #ffe9f0; }
 * {
   box-sizing: border-box;
 }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -14,8 +15,9 @@ html, body {
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  color: #222;
-  background: #f8f9fa;
+  color: #fff; /* light text for contrast */
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('background.jpg') center/cover no-repeat fixed;
   max-width: 72ch;
   margin: 0 auto;
   padding: 1rem;
